@@ -12,4 +12,7 @@ npm start
 
 ## 배포
 
-GitHub Pages로 배포합니다. `main` 브랜치에 push하면 사이트가 자동으로 갱신됩니다.
+`main` 브랜치에 push하면 두 곳 모두 자동으로 갱신됩니다.
+
+- Vercel: https://profile-website-umber-mu.vercel.app
+- GitHub Pages: https://voodoosss.github.io/profile-website/

@@ -1,0 +1,5 @@
+# Vercel serves this site as static files.
+# server.js is only for local preview (npm start); without this, Vercel turns it into a function.
+server.js
+package.json
+README.md

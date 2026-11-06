@@ -1,0 +1,158 @@
+:root {
+  --bg: #f4f5f9;
+  --card: #ffffff;
+  --text: #1f2330;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-soft: #eef0ff;
+  --border: #e5e7eb;
+  --radius: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1117;
+    --card: #181b24;
+    --text: #e8eaf0;
+    --muted: #9aa1b0;
+    --accent: #8b8cf8;
+    --accent-soft: #23264a;
+    --border: #2a2e3b;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  line-height: 1.7;
+  word-break: keep-all;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 48px;
+  box-shadow: 0 20px 50px -24px rgba(30, 35, 60, 0.25);
+}
+
+/* Profile header */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile__photo {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 6px var(--accent-soft);
+}
+
+.profile__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.profile__name {
+  margin: 4px 0 8px;
+  font-size: 2.1rem;
+  line-height: 1.25;
+}
+
+.profile__name span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.profile__tagline { color: var(--muted); }
+
+/* Sections */
+.section { margin-top: 32px; }
+
+.section__title {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.section p { color: var(--text); }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.tags li {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.email {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.email:hover { transform: translateY(-2px); opacity: 0.92; }
+.email:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 3px; }
+.email svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+.footer {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  body { padding: 24px 16px; align-items: flex-start; }
+  .card { padding: 32px 22px; }
+  .profile {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .profile__photo { width: 120px; height: 120px; }
+  .profile__name { font-size: 1.7rem; }
+  .tags { justify-content: center; }
+  .section__title { text-align: center; }
+  .section p { text-align: left; }
+  .section:last-of-type { text-align: center; }
+  .email { width: 100%; justify-content: center; }
+}

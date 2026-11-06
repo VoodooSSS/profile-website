@@ -1,0 +1,13 @@
+{
+  "name": "profile-website",
+  "version": "1.0.0",
+  "description": "개인 프로필 웹사이트 (Node.js 내장 http 모듈 서버)",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

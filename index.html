@@ -3,51 +3,461 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>양명충 | Profile</title>
-  <meta name="description" content="양명충의 개인 프로필 페이지">
+  <title>양명충 | Portfolio</title>
+  <meta name="description" content="미디어와 정치 커뮤니케이션을 데이터로 연구하는 양명충의 개인 프로필">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300..600,0..1,0&display=block">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="card">
-    <header class="profile">
-      <img class="profile__photo" src="images/profile.svg" alt="양명충 프로필 사진" width="160" height="160">
-      <div>
-        <p class="profile__eyebrow">PhD Student · Communication</p>
-        <h1 class="profile__name">양명충 <span>Myeongchung Yang</span></h1>
-        <p class="profile__tagline">미디어와 정치 커뮤니케이션을 데이터로 연구합니다.</p>
-      </div>
-    </header>
-
-    <section class="section">
-      <h2 class="section__title">자기소개</h2>
-      <p>
-        연세대학교에서 커뮤니케이션을 공부하는 박사과정생입니다.
-        소셜 미디어 플랫폼에서 정보가 어떻게 퍼지고, 사람들이 정치적 이슈를 어떻게
-        이야기하는지에 관심이 있습니다. 대규모 온라인 데이터와 계산 사회과학 방법을
-        활용해 이런 질문에 답하고자 합니다.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2 class="section__title">관심 분야</h2>
-      <ul class="tags">
-        <li>정치 커뮤니케이션</li>
-        <li>계산 사회과학</li>
-        <li>소셜 미디어와 알고리즘</li>
-        <li>허위정보</li>
-        <li>생성형 AI와 커뮤니케이션</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2 class="section__title">연락처</h2>
-      <a class="email" href="mailto:myeongchungyang@gmail.com">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-        myeongchungyang@gmail.com
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#home" data-nav>
+        <span class="brand-mark" aria-hidden="true">MY</span>
+        <span class="brand-text">
+          <span class="brand-name">양명충</span>
+          <span class="brand-role">Communication Researcher · PhD Student</span>
+        </span>
       </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="주 메뉴">
+        <a href="#home" data-nav class="is-active" aria-current="true">Home</a>
+        <a href="#about" data-nav>About</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm header-cta" href="#contact" data-nav>Get in Touch</a>
+        <img class="header-avatar" src="images/profile.svg" alt="" width="32" height="32">
+        <button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="메뉴 열기">
+          <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="section hero" id="home">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>👋 Open to Research Collaboration</span>
+          </div>
+
+          <h1 class="hero-title">
+            안녕하세요, 데이터로 미디어와 정치 커뮤니케이션을 연구하는 <span class="accent">연구자 양명충</span>입니다.
+          </h1>
+
+          <p class="hero-lead">
+            소셜 미디어 플랫폼에서 정보가 어떻게 퍼지고, 사람들이 정치적 이슈를 어떻게 이야기하는지 연구합니다.
+            대규모 온라인 데이터와 계산 사회과학 방법으로 이 질문에 답하고자 합니다.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#projects" data-nav>
+              <span>프로젝트 둘러보기</span>
+              <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+            </a>
+            <a class="btn btn-surface btn-lg" href="#contact" data-nav>
+              <span class="material-symbols-outlined icon-primary" aria-hidden="true">mail</span>
+              <span>연락하기</span>
+            </a>
+            <a class="btn btn-ghost btn-lg" href="mailto:myeongchungyang@gmail.com?subject=CV%20%EC%9A%94%EC%B2%AD" data-mail>
+              <span class="material-symbols-outlined" aria-hidden="true">description</span>
+              <span>CV 요청하기</span>
+            </a>
+          </div>
+
+          <dl class="hero-stats">
+            <div><dt>Years Research</dt><dd>3+</dd></div>
+            <div><dt>Research Projects</dt><dd>8+</dd></div>
+            <div><dt>Platforms Studied</dt><dd class="accent">4</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait">
+            <div class="portrait-halo" aria-hidden="true"></div>
+            <div class="portrait-card">
+              <img src="images/profile.svg" alt="양명충 프로필 사진" width="360" height="360">
+              <div class="portrait-pill">
+                <div class="portrait-pill-info">
+                  <span class="icon-bubble" aria-hidden="true"><span class="material-symbols-outlined">query_stats</span></span>
+                  <span class="stack">
+                    <strong>Computational Social Science</strong>
+                    <small>Data &amp; Methods</small>
+                  </span>
+                </div>
+                <span class="mini-badge">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer class="footer">© 2026 양명충</footer>
+    <!-- ================= ABOUT ================= -->
+    <section class="section section-raised" id="about">
+      <div class="container stack-xl">
+        <div class="section-head">
+          <div class="eyebrow"><span class="eyebrow-line"></span>Profile &amp; Background</div>
+          <h2>About Me</h2>
+          <p>전공, 연구 경험, 관심 분야를 바탕으로 디지털 미디어 환경의 커뮤니케이션 문제를 탐구합니다.</p>
+        </div>
+
+        <div class="bento">
+          <!-- Education -->
+          <article class="info-card">
+            <div class="icon-tile tile-primary"><span class="material-symbols-outlined" aria-hidden="true">school</span></div>
+            <div>
+              <span class="kicker">Education &amp; Core</span>
+              <h3>커뮤니케이션학 박사과정</h3>
+            </div>
+            <p>미디어 효과 이론과 계산 사회과학 방법을 함께 공부하며, 이론적 질문을 데이터로 검증할 수 있는 연구 설계를 지향합니다.</p>
+            <div class="info-card-foot">
+              <div class="row-between"><strong>Ph.D. in Communication</strong><small>2025 – Present</small></div>
+              <div class="row-between"><strong>M.A. in Communication</strong><small>2023 – 2025</small></div>
+              <div class="note-chip">
+                <span class="material-symbols-outlined icon-primary" aria-hidden="true">verified</span>
+                <span>정량 연구 방법 · 텍스트 분석 · 실험 설계</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Career -->
+          <article class="info-card">
+            <div class="icon-tile tile-neutral"><span class="material-symbols-outlined" aria-hidden="true">work_history</span></div>
+            <div>
+              <span class="kicker">Research Journey</span>
+              <h3>연구 경험 &amp; 참여 프로젝트</h3>
+            </div>
+            <ol class="timeline">
+              <li class="is-current">
+                <div class="row-between"><strong>Research Assistant</strong><small>2025 – Present</small></div>
+                <span class="timeline-org">Social Science Research Team</span>
+                <p>AI와 정치적 양극화를 주제로 한 공동 연구에서 데이터 수집과 분석을 담당합니다.</p>
+              </li>
+              <li>
+                <div class="row-between"><strong>Graduate Researcher</strong><small>2023 – 2025</small></div>
+                <span class="timeline-org muted">Media &amp; Data Lab</span>
+                <p>소셜 미디어 게시물 수십만 건을 수집·정제하고 자동 내용분석 파이프라인을 구축했습니다.</p>
+              </li>
+            </ol>
+          </article>
+
+          <!-- Interests -->
+          <article class="info-card">
+            <div class="icon-tile tile-tertiary"><span class="material-symbols-outlined" aria-hidden="true">interests</span></div>
+            <div>
+              <span class="kicker kicker-tertiary">Focus &amp; Curiosity</span>
+              <h3>관심 분야와 집중 영역</h3>
+            </div>
+            <ul class="focus-list">
+              <li>
+                <span class="material-symbols-outlined icon-primary" aria-hidden="true">campaign</span>
+                <span class="stack"><strong>Political Communication</strong><small>정치 커뮤니케이션과 온라인 공론장</small></span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined icon-primary" aria-hidden="true">hub</span>
+                <span class="stack"><strong>Computational Social Science</strong><small>대규모 온라인 데이터 기반 계산 사회과학</small></span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined icon-primary" aria-hidden="true">tune</span>
+                <span class="stack"><strong>Platforms &amp; Algorithms</strong><small>소셜 미디어 추천 알고리즘과 노출 구조</small></span>
+              </li>
+              <li>
+                <span class="material-symbols-outlined icon-primary" aria-hidden="true">fact_check</span>
+                <span class="stack"><strong>Misinformation &amp; GenAI</strong><small>허위정보 확산과 생성형 AI 커뮤니케이션</small></span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="stack-strip">
+          <div class="stack-strip-title">
+            <span class="material-symbols-outlined icon-primary icon-lg" aria-hidden="true">layers</span>
+            <div>
+              <h4>Research Tools &amp; Methods</h4>
+              <p>연구에서 주로 다루는 도구와 분석 방법</p>
+            </div>
+          </div>
+          <ul class="badges">
+            <li>Python</li>
+            <li>R</li>
+            <li>NLP</li>
+            <li>LLM Coding</li>
+            <li>Network Analysis</li>
+            <li>Algorithm Audit</li>
+            <li class="badge-accent">Mixed Methods</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects">
+      <div class="container stack-xl">
+        <div class="section-head section-head-split">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span>Case Studies</div>
+            <h2>Featured Projects</h2>
+            <p>온라인 데이터와 연구 질문을 연결해 진행한 주요 프로젝트 3선입니다.</p>
+          </div>
+          <span class="highlight-pill">3 Selected Highlights</span>
+        </div>
+
+        <div class="project-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-href="https://github.com/VoodooSSS">
+            <div>
+              <div class="preview">
+                <div class="preview-bar">
+                  <div class="window-dots">
+                    <span class="dot dot-red"></span><span class="dot dot-violet"></span><span class="dot dot-teal"></span>
+                    <span class="preview-label">DiffusionMap v1.2</span>
+                  </div>
+                  <span class="tag-live">Realtime</span>
+                </div>
+                <div class="preview-chart">
+                  <div class="row-between"><small>확산 지표</small><strong class="text-primary">+28.4%</strong></div>
+                  <svg viewBox="0 0 400 120" preserveAspectRatio="none" fill="none" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="diffGrad" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,90 Q50,70 100,75 T200,40 T300,55 T400,20 L400,120 L0,120 Z" fill="url(#diffGrad)"/>
+                    <path d="M0,90 Q50,70 100,75 T200,40 T300,55 T400,20" stroke="#1d4ed8" stroke-linecap="round" stroke-width="3" vector-effect="non-scaling-stroke"/>
+                    <circle cx="200" cy="40" r="4" fill="#1d4ed8"/>
+                    <circle cx="400" cy="20" r="4" fill="#1d4ed8"/>
+                  </svg>
+                </div>
+              </div>
+              <ul class="tags">
+                <li class="tag-key">Social Media</li><li>Network</li><li>Python</li>
+              </ul>
+              <h3 class="project-title">DiffusionMap - 소셜 미디어 정보 확산 분석</h3>
+              <p class="project-desc">게시물의 공유·전달 경로를 네트워크로 재구성해, 어떤 계정과 연결 구조가 정보 확산을 이끄는지 시각적으로 보여 주는 분석 프로젝트.</p>
+              <div class="metrics">
+                <div><strong class="text-primary-strong">1.2M+</strong><small>분석 게시물</small></div>
+                <div><strong>3</strong><small>비교 플랫폼</small></div>
+              </div>
+            </div>
+            <div class="card-links">
+              <a class="link-primary" href="https://github.com/VoodooSSS" target="_blank" rel="noopener">
+                <span>코드 저장소</span><span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+              </a>
+              <span class="slash">/</span>
+              <a class="link-plain" href="https://github.com/VoodooSSS" target="_blank" rel="noopener">
+                <span>연구 노트</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-href="https://github.com/VoodooSSS">
+            <div>
+              <div class="preview">
+                <div class="token-grid">
+                  <div class="token"><span class="token-chip chip-primary">LLM</span><span class="token-bar"></span></div>
+                  <div class="token"><span class="token-chip chip-secondary">HUM</span><span class="token-bar"></span></div>
+                  <div class="token"><span class="token-chip chip-tertiary">IRR</span><span class="token-bar"></span></div>
+                </div>
+                <div class="token-table">
+                  <div class="row-between"><code>--agreement-kappa</code><code class="text-primary"><b>0.82</b></code></div>
+                  <div class="row-between"><code>--coded-units</code><code><b>2,400</b></code></div>
+                </div>
+              </div>
+              <ul class="tags">
+                <li class="tag-key">NLP</li><li>LLM</li><li>Method</li>
+              </ul>
+              <h3 class="project-title">CodeAssist - LLM 보조 내용분석 프레임워크</h3>
+              <p class="project-desc">대규모 언어 모델과 인간 코더의 판단을 비교·검증해, 신뢰도를 확인하면서 텍스트 내용분석을 확장할 수 있도록 만든 연구 방법 프로젝트.</p>
+              <div class="metrics">
+                <div><strong class="text-primary-strong">0.82</strong><small>코더 간 신뢰도 (κ)</small></div>
+                <div><strong>40%</strong><small>코딩 시간 단축</small></div>
+              </div>
+            </div>
+            <div class="card-links">
+              <a class="link-primary" href="https://github.com/VoodooSSS" target="_blank" rel="noopener">
+                <span>코딩북 보기</span><span class="material-symbols-outlined" aria-hidden="true">view_quilt</span>
+              </a>
+              <span class="slash">/</span>
+              <a class="link-plain" href="https://github.com/VoodooSSS" target="_blank" rel="noopener">
+                <span>방법론 문서</span><span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-href="https://github.com/VoodooSSS">
+            <div>
+              <div class="preview preview-center">
+                <div class="rings">
+                  <svg viewBox="0 0 160 160" aria-hidden="true">
+                    <circle cx="80" cy="80" r="65" fill="none" stroke="#dae2fd" stroke-width="12"/>
+                    <circle cx="80" cy="80" r="65" fill="none" stroke="#1d4ed8" stroke-width="12" stroke-linecap="round" stroke-dasharray="408" stroke-dashoffset="102"/>
+                    <circle cx="80" cy="80" r="48" fill="none" stroke="#dae2fd" stroke-width="12"/>
+                    <circle cx="80" cy="80" r="48" fill="none" stroke="#00685f" stroke-width="12" stroke-linecap="round" stroke-dasharray="301" stroke-dashoffset="60"/>
+                    <circle cx="80" cy="80" r="31" fill="none" stroke="#dae2fd" stroke-width="12"/>
+                    <circle cx="80" cy="80" r="31" fill="none" stroke="#4e45d5" stroke-width="12" stroke-linecap="round" stroke-dasharray="194" stroke-dashoffset="30"/>
+                  </svg>
+                  <strong class="rings-value">84%</strong>
+                </div>
+                <div class="legend">
+                  <span><i class="legend-dot bg-primary"></i>정치</span>
+                  <span><i class="legend-dot bg-tertiary"></i>뉴스</span>
+                  <span><i class="legend-dot bg-secondary"></i>엔터</span>
+                </div>
+              </div>
+              <ul class="tags">
+                <li class="tag-key">Algorithm Audit</li><li>Video</li><li>Recommendation</li>
+              </ul>
+              <h3 class="project-title">FeedLens - 추천 알고리즘 노출 감사</h3>
+              <p class="project-desc">가상 사용자 계정으로 동영상 플랫폼의 추천 결과를 반복 수집해, 이용 이력에 따라 노출되는 콘텐츠의 범위가 어떻게 달라지는지 측정한 프로젝트.</p>
+              <div class="metrics">
+                <div><strong class="text-primary-strong">500+</strong><small>수집 세션</small></div>
+                <div><strong>84%</strong><small>상위 주제 집중도</small></div>
+              </div>
+            </div>
+            <div class="card-links">
+              <a class="link-primary" href="https://github.com/VoodooSSS" target="_blank" rel="noopener">
+                <span>수집 도구</span><span class="material-symbols-outlined" aria-hidden="true">smart_display</span>
+              </a>
+              <span class="slash">/</span>
+              <a class="link-plain" href="https://github.com/VoodooSSS" target="_blank" rel="noopener">
+                <span>결과 요약</span><span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section section-raised" id="contact">
+      <div class="container stack-xl">
+        <div class="section-head">
+          <div class="eyebrow"><span class="eyebrow-line"></span>Get in Touch</div>
+          <h2>Let’s Connect</h2>
+          <p>공동 연구나 아이디어가 있으시다면 언제든 편하게 연락해 주세요.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-side">
+            <div class="panel">
+              <h3>연락처 정보</h3>
+              <div class="contact-list">
+                <div class="contact-item contact-item-email">
+                  <a class="contact-email-link" href="mailto:myeongchungyang@gmail.com" data-mail>
+                    <span class="material-symbols-outlined icon-primary icon-md" aria-hidden="true">alternate_email</span>
+                    <span class="stack min-0">
+                      <small>Email</small>
+                      <strong class="truncate">myeongchungyang@gmail.com</strong>
+                    </span>
+                  </a>
+                  <button class="copy-btn" type="button" data-copy="myeongchungyang@gmail.com" aria-live="polite">
+                    <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+                    <span class="copy-label">복사</span>
+                  </button>
+                </div>
+                <div class="contact-item">
+                  <span class="material-symbols-outlined icon-primary icon-md" aria-hidden="true">call</span>
+                  <span class="stack"><small>Phone</small><strong>+82 10-0000-0000</strong></span>
+                </div>
+                <div class="contact-item">
+                  <span class="material-symbols-outlined icon-primary icon-md" aria-hidden="true">location_on</span>
+                  <span class="stack"><small>Location</small><strong>Seoul, South Korea (UTC+9)</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Social &amp; Channels</h3>
+              <div class="social-grid">
+                <a href="https://github.com/VoodooSSS" target="_blank" rel="noopener"><span class="material-symbols-outlined icon-primary" aria-hidden="true">code</span>GitHub</a>
+                <a href="https://scholar.google.com" target="_blank" rel="noopener"><span class="material-symbols-outlined icon-primary" aria-hidden="true">school</span>Google Scholar</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener"><span class="material-symbols-outlined icon-primary" aria-hidden="true">work</span>LinkedIn</a>
+                <a href="https://orcid.org" target="_blank" rel="noopener"><span class="material-symbols-outlined icon-primary" aria-hidden="true">badge</span>ORCID</a>
+              </div>
+              <a class="social-wide" href="https://voodoosss.github.io/profile-website/" target="_blank" rel="noopener">
+                <span><span class="material-symbols-outlined icon-primary" aria-hidden="true">article</span>Research Notes / Blog</span>
+                <span class="material-symbols-outlined muted icon-sm" aria-hidden="true">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="panel panel-form">
+            <div>
+              <h3>Quick Message Form</h3>
+              <p class="caption">공동 연구 제안이나 커피챗 등 편하게 메시지를 남겨 주세요. 전송하면 메일 작성창이 열립니다.</p>
+            </div>
+            <form id="contact-form" class="form" novalidate>
+              <div class="form-row">
+                <div class="field">
+                  <label for="sender-name">성함 / 소속</label>
+                  <input id="sender-name" name="name" type="text" placeholder="예: 홍길동 / OO대학교" required>
+                </div>
+                <div class="field">
+                  <label for="sender-email">이메일 주소</label>
+                  <input id="sender-email" name="email" type="email" placeholder="name@university.ac.kr" required>
+                </div>
+              </div>
+              <fieldset class="field">
+                <legend>문의 유형</legend>
+                <div class="choice-chips">
+                  <label><input type="radio" name="topic" value="공동 연구 제안" checked><span>Research Collaboration</span></label>
+                  <label><input type="radio" name="topic" value="데이터·방법론 문의"><span>Data &amp; Methods</span></label>
+                  <label><input type="radio" name="topic" value="발표·강연 요청"><span>Talk &amp; Seminar</span></label>
+                  <label><input type="radio" name="topic" value="커피챗"><span>Casual Coffee Chat</span></label>
+                </div>
+              </fieldset>
+              <div class="field">
+                <label for="sender-message">메시지 내용</label>
+                <textarea id="sender-message" name="message" rows="4" placeholder="연구 주제, 일정, 나누고 싶은 이야기를 적어 주세요." required></textarea>
+              </div>
+              <p class="form-feedback" id="form-feedback" role="status" hidden>
+                <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+                <span>메일 작성창을 열었습니다. 메일 앱에서 전송 버튼을 눌러 주세요.</span>
+              </p>
+              <p class="form-error" id="form-error" role="alert" hidden>이름, 올바른 이메일, 메시지를 모두 입력해 주세요.</p>
+              <button class="btn btn-primary btn-submit" type="submit">
+                <span>메시지 전송하기</span>
+                <span class="material-symbols-outlined" aria-hidden="true">send</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-name"><span class="brand-mark brand-mark-sm" aria-hidden="true">MY</span>양명충</div>
+        <p>© 2026 양명충. 경력·프로젝트·연락처 일부는 예시 내용입니다.</p>
+      </div>
+      <nav class="footer-links" aria-label="소셜 링크">
+        <a href="https://github.com/VoodooSSS" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://scholar.google.com" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://orcid.org" target="_blank" rel="noopener">ORCID</a>
+      </nav>
+      <a class="back-top" href="#home" data-nav>
+        <span class="material-symbols-outlined icon-sm" aria-hidden="true">arrow_upward</span>Back to top
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

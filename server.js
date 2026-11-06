@@ -8,7 +8,7 @@ const HOST = '127.0.0.1';
 const ROOT = __dirname;
 
 // 웹사이트에 필요한 파일만 공개합니다 (폴더 안의 다른 수업 자료는 공개하지 않음).
-const PUBLIC_FILES = new Set(['/index.html', '/style.css']);
+const PUBLIC_FILES = new Set(['/index.html', '/style.css', '/script.js']);
 const PUBLIC_DIRS = ['/images/'];
 
 const MIME_TYPES = {
